@@ -1,10 +1,10 @@
-const calculatorScreen = document.querySelector('.calculator-screen')
+const calculatorScreen = document.querySelector('.calculator-screen') //mendeklarasikan bahwa pengerjaan program ini untuk layar yang tertampil pada kalkulator
 
 const updateScreen = (number) => {
     calculatorScreen.value = number
 }
 
-const numbers = document.querySelectorAll(".number")
+const numbers = document.querySelectorAll(".number")//merekan jejak inputan angka yang dilakukan
 numbers.forEach((number) => {
     number.addEventListener("click", (event) => {
         inputNumber(event.target.value)
@@ -32,7 +32,7 @@ operators.forEach((operator) => {
     })
 })
 
-const inputOperator = (operator) => {
+const inputOperator = (operator) => {//mengkaitkan antara angka sebelum dan sesudah yang dimana dua 
     if (calculationOperator ==='') {
         prevNumber = currentNumber
     }
@@ -40,14 +40,14 @@ const inputOperator = (operator) => {
     currentNumber = '0'
 }
 
-const equalSign = document.querySelector('.equal-sign')
+const equalSign = document.querySelector('.equal-sign') //mendeklarasikan kalkulasi yang menyatakan sama dengan atau inputan yang akan menampilkan hasil
 
 equalSign.addEventListener('click', () => {
     calculate()
     updateScreen(currentNumber)
 })
 
-const calculate = () => {
+const calculate = () => { //merupakan fungsi kalkulasi atau perhitungan  berdasarkan yang di input oleh user
     let  result = ''
     switch(calculationOperator) {
         case "+" :
@@ -73,7 +73,7 @@ const clearAll = () => {
     prevNumber =''
     calculationOperator = ''
     currentNumber = '0'
-}
+} //pada bagian ini memberi program bahwa menampilkan angka 0 saat belum menginput apa pun pada kalkulatornya
 
 const clearBtn = document.querySelector('.all-clear')
 
@@ -89,7 +89,7 @@ decimal.addEventListener('click', (event) => {
     updateScreen(currentNumber)
 })
 
-inputDecimal = (dot) => {
+inputDecimal = (dot) => { //fungsi pemrograman untuk bisa menginput bilangan desimal
     if(currentNumber.includes('.')) {
         return
     }
