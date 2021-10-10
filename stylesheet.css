@@ -3,19 +3,21 @@
     margin: 0 auto;
     padding-top: 200px;
     width: 400px;
-}
+}/*memberi pengaturan pada kalkulator untuk memiliki opsi input yang tertampil secara tengah dan lebih rapi
+*/
 
 .calculator-screen {
-    width:100%;
-    height: 100px;
+    width:100%; /*lebar kalkulator akan mengikuti inspect yang dibunakan sebesar 100%*/
+    height: 100px; /*memberikan tinggi kalkulator yang digunakan keseluruhan adalah 100px*/
     background-color: #252525;
-    color: #fff;
+    color: #fff;/*huruf atau font yang digunakan bewarna putih*/
     text-align: right;
     font-size: 36px;
     border: none;
     padding:0 20px;
     box-sizing: border-box;
-}
+}/* memberi tampilan yang lebih baik pada kalkulator yang diberikan
+*/
 
 .calculator-keys {
     width:100%;
@@ -25,14 +27,14 @@
     display:flex;
 }
 
-button {
+button { /*opsi tampilan tombol pada kalkulator beserta tinggi,lebar*/
     color:#fff;
     border: 1px solid #252525;
     background-color: grey;
-    outline: none;
-    height: 80px;
-    font-size: 32px;
-    width: 25%;
+    outline: none; /*tidak ada outline pada tombol*/
+    height: 80px;/*tinggi tiap tombol*/
+    font-size: 32px; /*ukuran font*/
+    width: 25%; /*ketebalan lebar masing masing tombol dari keseluruhan 100% tampilan kalkulator*/
 }
 
 .all-clear, .zero-btn{
@@ -40,13 +42,13 @@ button {
 }
 
 .operator, .equal-sign {
-    background-color:palevioletred;
+    background-color:palevioletred; /*warna tombol kalkulasi sebelum ditekan*/
 }
 
 button:hover{
-    background-color: darkgrey;
+    background-color: darkgrey; /*warna tombol kalkulator berupa angka dan opsi clear, persen dan koma*/
 }
 
 .operator:hover, .equal-sign:hover {
-    background-color: deeppink;
+    background-color: deeppink; /*efek tombol yang berubah warnanya setelah ditekan*/
 }
